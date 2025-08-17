@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 YaBrowser/25.6.0.0 Safari/537.36" version="28.1.0">
+  <diagram name="Page-1" id="mG_HQ0uRyYDN4zdUk5rH">
+    <mxGraphModel dx="1378" dy="772" grid="0" gridSize="18" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-1" value="&lt;div&gt;External&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-2" value="&lt;div&gt;&lt;b&gt;Слои хранилища&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="10" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="DVceJ0emXcIIvGIxMPfT-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="300" as="sourcePoint" />
+            <mxPoint x="130" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-4" value="Staging" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="129.5" y="220" as="sourcePoint" />
+            <mxPoint x="129.5" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-7" value="&lt;div&gt;ODS&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-8" value="Месячные партиции (исторические данные)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-9" value="Набор дневных партиций для текущего месяца" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-10" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="370" as="sourcePoint" />
+            <mxPoint x="70" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-11" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="DVceJ0emXcIIvGIxMPfT-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="370" as="sourcePoint" />
+            <mxPoint x="450" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-12" value="&lt;div&gt;Внешние таблицы для разных БД (pxf)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="60" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-14" value="&lt;div&gt;Материализация инкремента из внешних таблиц&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="160" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-15" value="&lt;b&gt;Описание&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="11" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-16" value="&lt;div&gt;Основной слой данных с разными типами партиций&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="296" y="267.5" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-17" value="&lt;b&gt;Параметры таблиц&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="580" y="5" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-18" value="&lt;div&gt;Указываем параметры&lt;/div&gt;&lt;div&gt;подключения к внешней БД&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="563" y="66" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-19" value="&lt;div&gt;Таблицы колоночного формата.&lt;/div&gt;&lt;div&gt;Distributed randomly&lt;/div&gt;&lt;div&gt;Партицирование по дате загрузки&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="560" y="155" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-20" value="&lt;div&gt;Таблицы колоночного формата.&lt;/div&gt;&lt;div&gt;Распределение по бизнес ключу&lt;/div&gt;&lt;div&gt;Партицирование по дате обновления&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="563" y="264" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-22" value="&lt;div&gt;Отдельный скрипт каждый месяц/квартал объединяет партиции дневные в одну месячную&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="296" y="366.88" width="150" height="66.25" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-23" value="DataMart" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="469" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-24" value="&lt;div&gt;Витрины данных, объединяющие несколько ods/DM таблиц&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="300" y="465.88" width="166" height="66.25" as="geometry" />
+        </mxCell>
+        <mxCell id="DVceJ0emXcIIvGIxMPfT-25" value="&lt;div&gt;Таблицы колоночного формата.&lt;/div&gt;&lt;div&gt;Распределение по бизнес ключу&lt;/div&gt;&lt;div&gt;Партицирование по дате обновления&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="580" y="455" width="190" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
