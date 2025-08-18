@@ -1,0 +1,2 @@
+CREATE TABLE stg.t_tz_bpm_cashflow_source ( id uuid NULL, created_on timestamp NULL, created_by_id uuid NULL, modified_on timestamp NULL, modified_by_id uuid NULL, "name" text NULL, description text NULL, process_listeners int4 NULL, count_app int4 NULL, "number" int4 NULL, count_repayment int4 NULL, token_repayment_allowed bool NULL, app_counter int4 NULL, repayment_counter int4 NULL, etl_execution_date timestamp NULL, etl_start_date timestamp NULL)
+DISTRIBUTED BY (id);
