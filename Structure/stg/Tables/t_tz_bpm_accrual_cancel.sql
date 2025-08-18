@@ -1,0 +1,24 @@
+CREATE TABLE stg.t_tz_bpm_accrual_cancel(
+	id uuid NULL,
+	created_on timestamp NULL,
+	created_by_id uuid NULL,
+	modified_on timestamp NULL,
+	modified_by_id uuid NULL,
+	process_listeners int4 NULL,
+	application_id uuid NULL,
+	accrual_date date NULL,
+	principal_debt numeric NULL,
+	interest_debt numeric NULL,
+	penalty_debt numeric NULL,
+	fine_debt numeric NULL,
+	amount_accrued numeric NULL,
+	type_id uuid NULL,
+	status_id uuid NULL,
+	no_pay bool NULL,
+	payment_schedule_id uuid NULL,
+	cancel_date timestamp NULL,
+	state_duty_debt numeric NULL,
+	etl_execution_date timestamp NULL,
+	etl_start_date timestamp NULL
+)
+DISTRIBUTED BY (id);
