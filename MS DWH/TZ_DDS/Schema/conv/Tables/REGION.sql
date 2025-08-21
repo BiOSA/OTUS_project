@@ -1,0 +1,12 @@
+﻿CREATE TABLE conv.REGION
+(
+	  RK                BIGINT       NOT NULL IDENTITY(1, 1) CONSTRAINT PK_conv_REGION                     PRIMARY KEY
+	, ID                SQL_VARIANT  NOT NULL
+	, SOURCE_SYSTEM_CD  VARCHAR(3)   NOT NULL                CONSTRAINT FK_conv_REGION_dbo_SOURCE_SYSTEM   FOREIGN KEY REFERENCES dbo.SOURCE_SYSTEM ON UPDATE CASCADE
+	, [Source]          sysname          NULL
+	                                                       , CONSTRAINT UX_conv_REGION_ID_SOURCE_SYSTEM_CD UNIQUE(ID, SOURCE_SYSTEM_CD) WITH (IGNORE_DUP_KEY = ON)
+);
+GO
+CREATE INDEX IX_conv_REGION_ID ON conv.REGION(ID);
+GO
+GRANT INSERT, DELETE, UPDATE, SELECT ON conv.REGION TO tz_report;

@@ -1,0 +1,13 @@
+schema = [
+    {"name": "id", "type": "UUID"},
+    {"name": "created_on", "type": "TIMESTAMP"},
+    {"name": "created_by_id", "type": "UUID"},
+    {"name": "modified_on", "type": "TIMESTAMP"},
+    {"name": "modified_by_id", "type": "UUID"},
+    {"name": "name", "type": "TEXT"},
+    {"name": "description", "type": "TEXT"},
+    {"name": "process_listeners", "type": "INTEGER"},
+    {"name": "action_type_id", "type": "UUID"},
+    {"name": "etl_execution_date", "type": "TIMESTAMP"},
+    {"name": "etl_start_date", "type": "TIMESTAMP"},
+]

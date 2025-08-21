@@ -1,0 +1,40 @@
+﻿CREATE TABLE conv.APPLICATION
+(
+	  RK                BIGINT            NOT NULL IDENTITY(1, 1) CONSTRAINT PK_conv_APPLICATION PRIMARY KEY
+	, SOURCE_SYSTEM_CD  VARCHAR(3)        NOT NULL                CONSTRAINT FK_conv_APPLICATION_dbo_SOURCE_SYSTEM FOREIGN KEY REFERENCES dbo.SOURCE_SYSTEM ON UPDATE CASCADE
+	, BKI_UID           VARCHAR(50)           NULL
+	, Number            VARCHAR(20)           NULL
+	, [Source]          sysname               NULL
+    , ID                UNIQUEIDENTIFIER  NOT NULL
+);
+GO
+CREATE TRIGGER conv.tr_conv_APPLICATION ON conv.APPLICATION
+AFTER INSERT
+AS BEGIN
+    UPDATE a SET
+	      BKI_UID = dbo.fn_get_uid_bki(CAST(i.ID AS UNIQUEIDENTIFIER))
+	FROM       conv.APPLICATION a
+	INNER JOIN inserted         i   ON a.RK           = i.RK;
+
+	UPDATE a SET
+	    Number = app.Number
+	FROM       conv.APPLICATION                 a   WITH(INDEX=IX_conv_APPLICATION_Number)
+	INNER JOIN [$(TZ_MARTS_DB)].mart.ReportFund app ON app.Account_RK = a.RK
+	WHERE a.Number IS NULL;
+
+	UPDATE a SET
+	    Number = app.Number
+	FROM       conv.APPLICATION a   WITH(INDEX=IX_conv_APPLICATION_Number)
+	INNER JOIN tz.Application   app WITH(INDEX=IX_tz_Application_KeyId)    ON app.Account_RK = a.RK
+	WHERE a.Number IS NULL;
+END;
+GO
+CREATE NONCLUSTERED             INDEX IX_conv_APPLICATION_BKI_UID ON conv.APPLICATION (BKI_UID) INCLUDE(ID);
+GO
+CREATE NONCLUSTERED COLUMNSTORE INDEX IX_conv_APPLICATION_ID      ON conv.APPLICATION (ID, SOURCE_SYSTEM_CD);
+GO
+CREATE INDEX IX_conv_APPLICATION_Number  ON conv.APPLICATION (Number);
+GO
+GRANT INSERT, DELETE, UPDATE, SELECT ON conv.APPLICATION TO tz_report;
+GO
+GRANT SELECT, INSERT, UPDATE ON conv.APPLICATION TO [1c_dwh];

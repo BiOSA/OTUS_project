@@ -1,0 +1,81 @@
+CREATE TABLE [dbo].[Application]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Number] [nvarchar](50) NOT NULL,
+	[ContactId] [uniqueidentifier] NULL,
+	[Email] [nvarchar](50) NOT NULL,			
+	[ContactMobilePhone] [nvarchar](250) NOT NULL,
+	[SourceURL] [nvarchar](max) NOT NULL,
+	[AnswerURL] [nvarchar](max) NOT NULL,
+	[AnswerURL3] [nvarchar](max) NOT NULL,
+	[OfferSum] [decimal](18, 2) NULL,
+	[Cookie] [nvarchar](max) NOT NULL,
+	[ProductId] [uniqueidentifier] FOREIGN KEY([ProductId]) REFERENCES [dbo].[Product] ([Id]),
+	[DecisionId] [uniqueidentifier] FOREIGN KEY([DecisionId]) REFERENCES [dbo].[ApplicationDecision] ([Id]),
+	[ContactSourceId] [uniqueidentifier] FOREIGN KEY([ContactSourceId]) REFERENCES [dbo].[ContactSource] ([Id]),
+	[FillingDate] [datetime2](7) NULL,
+	[ProceededOn] [datetime2](7) NULL,
+	[PaymentDate] [datetime2](7) NULL
+);
+
+
+CREATE TABLE [dbo].[Product]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Name] [nvarchar](250) NOT NULL,
+	[TypeId] [uniqueidentifier] FOREIGN KEY([TypeId]) REFERENCES [dbo].[ProductType] ([Id])
+);
+
+
+CREATE TABLE [dbo].[ProductType]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Name] [nvarchar](250) NOT NULL,
+	[Description] [nvarchar](250) NOT NULL
+);
+
+
+CREATE TABLE [dbo].[ApplicationDecision]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Name] [nvarchar](250) NOT NUL
+);
+
+
+CREATE TABLE [dbo].[ContactSource]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Name] [nvarchar](250) NOT NULL,
+	[SourceGroupId] [uniqueidentifier] FOREIGN KEY([SourceGroupId]) REFERENCES [dbo].[ContactSourceGroup] ([Id])
+);
+
+
+CREATE TABLE [dbo].[ContactSourceGroup]
+(
+	[Id] [uniqueidentifier] PRIMARY KEY,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedById] [uniqueidentifier] NULL,
+	[ModifiedOn] [datetime2](7) NULL,
+	[ModifiedById] [uniqueidentifier] NULL,
+	[Name] [nvarchar](250) NOT NULL
+);

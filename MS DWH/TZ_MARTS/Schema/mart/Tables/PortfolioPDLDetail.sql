@@ -1,0 +1,4 @@
+﻿CREATE TABLE mart.PortfolioPDLDetail
+(
+	[Id] INT NOT NULL PRIMARY KEY
+)

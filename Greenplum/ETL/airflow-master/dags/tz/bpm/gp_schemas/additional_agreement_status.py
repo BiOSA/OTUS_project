@@ -1,0 +1,13 @@
+schema = [
+    {"name": "Id", "type": "UUID"},
+    {"name": "CreatedOn", "type": "TIMESTAMP"},
+    {"name": "CreatedById", "type": "UUID"},
+    {"name": "ModifiedOn", "type": "TIMESTAMP"},
+    {"name": "ModifiedById", "type": "UUID"},
+    {"name": "Name", "type": "TEXT"},
+    {"name": "Description", "type": "TEXT"},
+    {"name": "ProcessListeners", "type": "INTEGER"},
+    {"name": "IsFinal", "type": "BOOLEAN"},
+    {"name": "EtlExecutionDate", "type": "TIMESTAMP"},
+    {"name": "EtlStartDate", "type": "TIMESTAMP"},
+]

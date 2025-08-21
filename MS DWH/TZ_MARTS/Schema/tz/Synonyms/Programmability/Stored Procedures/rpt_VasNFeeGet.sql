@@ -1,0 +1,2 @@
+﻿CREATE SYNONYM tz.rpt_VasNFeeGet
+	FOR [$(TZ_BPMONLINETZ_SRV)].[$(TZ_BPMONLINETZ_DB)].dbo.rpt_VasNFeeGet;

@@ -1,0 +1,1 @@
+schema=[{'name': 'Id', 'type': 'UUID'}, {'name': 'CreatedOn', 'type': 'TIMESTAMP'}, {'name': 'MobilePhone', 'type': 'TEXT'}, {'name': 'CurrentAttempt', 'type': 'INTEGER'}, {'name': 'EndDate', 'type': 'TIMESTAMP'}, {'name': 'EtlExecutionDate', 'type': 'TIMESTAMP'}, {'name': 'EtlStartDate', 'type': 'TIMESTAMP'}]
