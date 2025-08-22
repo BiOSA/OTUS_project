@@ -1,1 +1,0 @@
-﻿CREATE SCHEMA risk_spr;

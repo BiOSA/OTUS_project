@@ -1,1 +1,0 @@
-﻿CREATE SCHEMA [1c];

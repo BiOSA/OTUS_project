@@ -1,1 +1,0 @@
-﻿CREATE SCHEMA bd_marts;

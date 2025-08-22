@@ -1,2 +1,0 @@
-﻿CREATE SYNONYM tz_dds.conv_APPLICATION
-	FOR [$(TZ_DDS_DB)].conv.APPLICATION;
