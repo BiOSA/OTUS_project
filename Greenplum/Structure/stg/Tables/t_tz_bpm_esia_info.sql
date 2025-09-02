@@ -1,7 +1,0 @@
-CREATE TABLE stg.t_tz_bpm_esia_info ( id uuid NULL, created_on timestamp NULL, created_by_id uuid NULL, modified_on timestamp NULL, modified_by_id uuid NULL, process_listeners int4 NULL, contact_id uuid NULL, application_id uuid NULL, "trusted" bool NULL, second_name text NULL, first_name text NULL, father_name text NULL, birth_date date NULL, birth_place text NULL, snils text NULL, inn text NULL, document_series text NULL, document_number text NULL, document_issued_on date NULL, document_issued_by text NULL, department_code text NULL, registration_citizenship text NULL, mobile_phone text NULL, email text NULL, is_digital_profile bool NULL, message text NULL, contacts text NULL, "oid" int8 NULL, gender text NULL, registration_region text NULL, registration_city text NULL, registration_street text NULL, registration_house text NULL, registration_flat text NULL, registration_building text NULL, registration_fias_code text NULL, registration_address_str text NULL, actual_region text NULL, actual_city text NULL, actual_street text NULL, actual_house text NULL, actual_flat text NULL, actual_building text NULL, actual_fias_code text NULL, actual_address_str text NULL, actual_citizenship text NULL, registration_zip_code text NULL, actual_zip_code text NULL, etl_execution_date timestamp NULL, etl_start_date timestamp NULL)
-DISTRIBUTED BY (id)
-PARTITION BY RANGE(modified_on) 
-          (
-          START ('2025-08-06 00:00:00'::timestamp without time zone) END ('2025-08-07 00:00:00'::timestamp without time zone) EVERY ('1 day'::interval)
-          );
-

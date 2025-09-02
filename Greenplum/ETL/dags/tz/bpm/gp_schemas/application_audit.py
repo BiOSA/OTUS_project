@@ -1,1 +1,0 @@
-schema=[{'name': 'Id', 'type': 'UUID'}, {'name': 'ApplicationId', 'type': 'UUID'}, {'name': 'StatusId_Old', 'type': 'UUID'}, {'name': 'StatusId_New', 'type': 'UUID'}, {'name': 'Query_Text', 'type': 'VARCHAR'}, {'name': 'ChangeDate', 'type': 'TIMESTAMP'}, {'name': 'EtlExecutionDate', 'type': 'TIMESTAMP'}, {'name': 'EtlStartDate', 'type': 'TIMESTAMP'}]

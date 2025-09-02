@@ -1,2 +1,0 @@
-CREATE TABLE stg.t_tz_cr_export_file ( file_content bytea NULL, export_packet_id int8 NULL, external_file_id varchar(36) NULL, external_folder varchar(128) NULL, file_content_text varchar NULL)
-DISTRIBUTED RANDOMLY;

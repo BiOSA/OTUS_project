@@ -1,1 +1,0 @@
-CREATE SCHEMA ext AUTHORIZATION gpdb_admin;
